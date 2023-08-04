@@ -1,11 +1,10 @@
-const App = () => {
-  
-  return (
-    <>
-      
-    </>
-  )
-    
-}
+import { UserProvider } from "./contexts/UserContext";
+import { RoutesMain } from "./routes";
 
-export default App
+export const App = () => {
+  return (
+    <UserProvider>
+      <RoutesMain />
+    </UserProvider>
+  );
+};
