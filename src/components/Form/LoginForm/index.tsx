@@ -41,7 +41,7 @@ export const LoginForm = () => {
         helperText={errors.password?.message}
         {...register('password')}
       />
-      <Button fullWidth type="submit" variant="contained" color="secondary">
+      <Button fullWidth type="submit" variant="contained" color="primary">
         Entrar
       </Button>
     </form>

@@ -16,7 +16,6 @@ export const RegisterPage = () => {
       >
         <Paper
           variant="outlined"
-          elevation={24}
           sx={{
             display: "flex",
             flexDirection: "column",

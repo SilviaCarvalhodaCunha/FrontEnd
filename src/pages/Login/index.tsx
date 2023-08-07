@@ -16,7 +16,6 @@ export const LoginPage = () => {
       >
         <Paper
           variant="outlined"
-          elevation={24}
           sx={{
             display: "flex",
             flexDirection: "column",
