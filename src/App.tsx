@@ -3,7 +3,8 @@ import { UserProvider } from "./contexts/UserContext";
 import { RoutesMain } from "./routes";
 import { ContactProvider } from "./contexts/ContactContext";
 import { ThemeProvider } from "@mui/material";
-import { GlobalStyle, theme } from "./styles/GlobalStyle";
+import { GlobalStyle } from "./styles/GlobalStyle";
+import { theme } from "./styles/theme";
 
 export const App = () => {
   return (

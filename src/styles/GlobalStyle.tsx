@@ -1,18 +1,11 @@
-import { createGlobalStyle } from 'styled-components';
-import { createTheme } from '@mui/material/styles';
-
-
-const colors = {
-  primary: '#ff6b6b',
-  secondary: '#ffad9b',
-  background: '#F5F5F5',
-  text: '#333333',
-  error: '#ff0000',
-};
+import { createGlobalStyle } from "styled-components";
+import { theme } from "./theme";
 
 export const GlobalStyle = createGlobalStyle`
   body {
     height: 100vh;
+    background-color: ${theme.palette.background.default};
+    color: ${theme.palette.text.primary};
   }
 
   *,
@@ -34,23 +27,3 @@ export const GlobalStyle = createGlobalStyle`
     text-decoration: none;
   }
 `;
-
-export const theme = createTheme({
-  palette: {
-    primary: {
-      main: colors.primary,
-    },
-    secondary: {
-      main: colors.secondary,
-    },
-    background: {
-      default: colors.background,
-    },
-    text: {
-      primary: colors.text,
-    },
-    error: {
-      main: colors.error,
-    },
-  },
-});
