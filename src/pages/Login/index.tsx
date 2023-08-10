@@ -2,10 +2,20 @@ import { Box, Paper, Typography, Link as MuiLink } from "@mui/material";
 import { LoginForm } from "../../components/Form/LoginForm";
 import { Link } from "react-router-dom";
 import agenda from "../../assets/agenda.png";
+import backgroundImg from "../../assets/backgroundImg.png"
 
 export const LoginPage = () => {
   return (
-    <main>
+    <main
+      style={{
+        backgroundImage: `url(${backgroundImg})`,
+        backgroundSize: "cover",
+        backgroundPosition: "center",
+        display: "flex",
+        justifyContent: "center",
+        alignItems: "center",
+      }}
+    >
       <Box
         sx={{
           display: "flex",
@@ -47,6 +57,7 @@ export const LoginPage = () => {
             minWidth: 300,
             width: "20%",
             height: "50%",
+            backgroundColor: "transparent"
           }}
         >
           <Paper
@@ -59,12 +70,13 @@ export const LoginPage = () => {
               minWidth: 300,
               width: "50%",
               height: "100%",
+              backgroundColor: "transparent"
             }}
           >
-            <Typography variant="h5" component="h1" align="center" gutterBottom>
+            <Typography variant="h4" component="h1" align="center" gutterBottom>
               Agenda de contatos
             </Typography>
-            <Typography variant="h6" component="h2" align="center" gutterBottom>
+            <Typography variant="h5" component="h2" align="center" gutterBottom>
               Na trilha dos relacionamentos, cada contato é um passo em direção
               a conexões duradouras.
             </Typography>
