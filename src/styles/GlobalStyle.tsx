@@ -13,7 +13,7 @@ export const GlobalStyle = createGlobalStyle`
   *::after {
     margin: 0;
     padding: 0;
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Poppins', sans-serif;
     box-sizing: border-box;
     border: 0;
     font-size: 1.2rem;
