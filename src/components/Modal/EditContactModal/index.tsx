@@ -6,7 +6,7 @@ interface EditContactProps {
   isOpen: boolean;
   onClose: () => void;
   contact: IContact;
-  onUpdate: (data: IContact) => void;
+  onUpdate: (contactId:number, data: Partial<IContact>) => void;
 }
 
 export const EditContact: React.FC<EditContactProps> = ({

@@ -18,11 +18,11 @@ export const ContactCard = ({ contact }: ContactCardProps) => {
     setIsEditModalOpen(true);
   };
 
-  const handleUpdateContact = (data: IContact) => {
-    updateContact(contact.id, data);
-
+  const handleUpdateContact = (contactId:number, updatedData: Partial<IContact>) => {
+    updateContact(contactId, updatedData);
     setIsEditModalOpen(false);
   };
+  
 
   const handleCloseEditModal = () => {
     setIsEditModalOpen(false);
@@ -42,7 +42,7 @@ export const ContactCard = ({ contact }: ContactCardProps) => {
   };
 
   return (
-    <Card>
+    <Card style={{ margin: "1rem" }}>
       <CardContent>
         <Typography variant="h6">{contact.name}</Typography>
         <Typography>{contact.email}</Typography>

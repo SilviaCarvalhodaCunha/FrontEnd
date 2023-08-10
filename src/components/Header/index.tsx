@@ -68,9 +68,9 @@ export const Header = ({ onShowContactList }: HeaderProps) => {
 
   return (
     <header>
-      <div>
-        <Box display="flex" alignItems="center" gap={2}>
-          <img src={agenda} alt="Agenda de Contatos" style={{ width: "5%" }} />
+      <Box display={"flex"} alignItems={"center"} justifyContent={"space-around"} sx={{backgroundColor: "Background"}}>
+        <Box display="flex" alignItems="center" gap={2} justifyContent={"flex-start"} sx={{width: "20%"}}>
+          <img src={agenda} alt="Agenda de Contatos" style={{ width: "30%" }} />
           <Box flexDirection="column">
             {user &&
               user.name.split(" ").map((name, index) => (
@@ -80,7 +80,7 @@ export const Header = ({ onShowContactList }: HeaderProps) => {
               ))}
           </Box>
         </Box>
-        <div>
+        <Box display={"flex"} justifyContent={"space-evenly"} sx={{width: "80%"}}>
           <Button onClick={handleListContact}>Meus Contatos</Button>
           <Button onClick={handleOpenContactModal}>Criar Contato</Button>
           <Button onClick={handleOpenEditUserModal}>Editar Perfil</Button>
@@ -107,8 +107,8 @@ export const Header = ({ onShowContactList }: HeaderProps) => {
             onConfirm={handleDeleteUser}
             userId={currentUser.id}
           />
-        </div>
-      </div>
+        </Box>
+      </Box>
     </header>
   );
 };
